@@ -1,5 +1,4 @@
 function solution(num, k) {
-    let answer = String(num).indexOf(k);
-    if (answer === -1) return answer;
-    else return answer + 1;
+    answer = String(num).indexOf(k) 
+    return answer === -1 ? -1 :  answer + 1
 }
