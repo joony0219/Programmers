@@ -1,8 +1,9 @@
 function solution(t, p) {
-    let arrayT = [];
-    let leng = p.length;
-    for(let i = 0; i < t.length - leng + 1; i++) {
-        arrayT.push(t.slice(i, i + leng))
+    let answer = 0;
+    let len = p.length;
+    for (let i = 0; i <= t.length - len; i++) {
+        let str = t.slice(i, i+len);
+        if (str <= p) answer++;
     }
-    return arrayT.map((num) => num <= p).filter((bol) => bol === true).length ;
+    return answer
 }
