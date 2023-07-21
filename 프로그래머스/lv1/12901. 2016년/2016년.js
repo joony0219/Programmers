@@ -1,12 +1,11 @@
 function solution(a, b) {
-    var answer = 0;
     let day = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
     let Month = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    let answer = b + 4;
     for (let i = 0; i < a - 1; i++) {
         answer += Month[i];
     }
-    answer += b;
-    return day[(answer + 4) % 7];
+    return day[answer % 7];
 }
 
 // 윤년 : 2월은 29일까지 1년: 366일
